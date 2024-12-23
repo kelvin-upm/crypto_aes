@@ -27,30 +27,24 @@
 		},
 		{
 			"name": "getRecord",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": []
-				},
 				"url": {
-					"raw": "localhost:8080/crypto/testcrypti2",
+					"raw": "localhost:8080/crypto/get/cryptokey1",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"crypto",
-						"testcrypti2"
+						"get",
+						"cryptokey1"
 					],
 					"query": [
 						{
-							"key": "",
-							"value": null,
+							"key": "param1",
+							"value": "cryptokey1",
 							"disabled": true
 						}
 					]
@@ -64,15 +58,16 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/crypto/decrypt/testcrypti2",
+					"raw": "localhost:8080/crypto/get/decrypt/cryptokey1",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"crypto",
+						"get",
 						"decrypt",
-						"testcrypti2"
+						"cryptokey1"
 					]
 				}
 			},
@@ -85,7 +80,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"key\":\"testcrypti2\",\r\n    \"message\":\"encrypt this message22\"\r\n}",
+					"raw": "{\r\n    \"key\":\"cryptokey1\",\r\n    \"message\":\"encrypt this message22\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -93,13 +88,14 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/crypto",
+					"raw": "localhost:8080/crypto/insert",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"crypto"
+						"crypto",
+						"insert"
 					]
 				}
 			},
