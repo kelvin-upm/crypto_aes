@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "b5238b58-cf58-47c7-8492-2ad26f9ecc62",
+		"name": "Crypto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40112599"
+	},
+	"item": [
+		{
+			"name": "getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/crypto/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"crypto",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRecord",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost:8080/crypto/testcrypti2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"crypto",
+						"testcrypti2"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "decrypt",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/crypto/decrypt/testcrypti2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"crypto",
+						"decrypt",
+						"testcrypti2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "encrypt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"key\":\"testcrypti2\",\r\n    \"message\":\"encrypt this message22\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/crypto",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"crypto"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
